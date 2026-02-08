@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Content\Homepage\Presentation\Controller;
 
 class HomepageController

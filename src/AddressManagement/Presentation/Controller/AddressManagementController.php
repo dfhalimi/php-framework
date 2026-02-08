@@ -1,11 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\AddressManagement\Presentation\Controller;
 
 use App\AddressManagement\Presentation\Dto\PersonDto;
+use Framework\Controller\AbstractController;
 use Framework\Database\DatabaseConnection;
 
-class AddressManagementController
+class AddressManagementController extends AbstractController
 {
     public function indexAction(): void
     {
@@ -26,17 +29,10 @@ class AddressManagementController
             );
         }
 
-        // Start output buffering
-        ob_start();
-
-        // Include the template file
-        include './public/address_management/index.php';
-
-        // End buffering and return its contents
-        $output = ob_get_clean();
-        echo $output;
-
-        #readfile('./public/address_management/index.php');
+        $this->render(
+            './public/address_management/index.php',
+            ['addresses' => $addresses]
+        );
         http_response_code(200);
     }
 }

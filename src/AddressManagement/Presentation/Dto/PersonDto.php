@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\AddressManagement\Presentation\Dto;
 
 class PersonDto
 {
     public function __construct(
-        public string $id,
+        public int    $id,
         public string $lastName,
         public string $firstName,
         public string $streetAddress,

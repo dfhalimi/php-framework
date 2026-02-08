@@ -1,6 +1,9 @@
 <?php
-require __DIR__ . '/framework/autoload.php';
-require __DIR__ . '/framework/Database/DatabaseConnection.php';
+
+declare(strict_types=1);
+
+require __DIR__ . '/Framework/autoload.php';
+require __DIR__ . '/Framework/Database/DatabaseConnection.php';
 
 use App\AddressManagement\Presentation\Controller\AddressManagementController;
 use App\Content\Homepage\Presentation\Controller\HomepageController;
