@@ -22,13 +22,13 @@ class Person
         $this->country       = $country;
     }
 
-    private int $id {
+    public int $id {
         get {
             return $this->id;
         }
     }
 
-    private string $lastName {
+    public string $lastName {
         get {
             return $this->lastName;
         }
@@ -37,7 +37,7 @@ class Person
         }
     }
 
-    private string $firstName {
+    public string $firstName {
         get {
             return $this->firstName;
         }
@@ -46,7 +46,7 @@ class Person
         }
     }
 
-    private string $streetAddress {
+    public string $streetAddress {
         get {
             return $this->streetAddress;
         }
@@ -55,7 +55,7 @@ class Person
         }
     }
 
-    private string $city {
+    public string $city {
         get {
             return $this->city;
         }
@@ -64,17 +64,12 @@ class Person
         }
     }
 
-    private string $country {
+    public string $country {
         get {
             return $this->country;
         }
         set {
             $this->country = $value;
         }
-    }
-
-    public function getFullName(): string
-    {
-        return "$this->firstName $this->lastName";
     }
 }
