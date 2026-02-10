@@ -32,7 +32,8 @@
                 <th>Country</th>
             </tr>
             <?php
-            /** @var App\AddressManagement\Presentation\Dto\PersonDto[] $addresses */
+            use App\AddressManagement\Presentation\Dto\PersonDto;
+            /** @var PersonDto[] $addresses */
             foreach ($addresses as $address) : ?>
                 <tr>
                     <td><?= $address->id ?></td>

@@ -8,7 +8,7 @@ class HomepageController
 {
     public function homepageAction(): void
     {
-        readfile('./public/index.php');
+        readfile('./public/index.html');
         http_response_code(200);
     }
 }
